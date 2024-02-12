@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revasya Arthana Agung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <img src="img/logore-removebg-preview.png" class="logo" height="60px" width="170px">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Certificate</a></li>
+                <li><a href="#">Portofolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="header-left">
+            <p>Front End Developer</p>
+            <h1>Hi, saya Revasya dari SMKN 7 Semarang</h1>
+        </div>
+        <div class="header-right">
+            <img src="img/lgi-removebg-preview.png" alt="">
+        </div>
+        <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>Hai guys, kenalin nama aku Revasya Arthana Agung, kini aku bersekolah di SMK Negeri 7 Semarang dan mengambil konsentrasi keahlian Sistem Informasi Jaringan dan Aplikasi, atau biasa disebut SIJA.</p>
+
+                    <div class="tab-tittles">
+                        <P class="tab-links active-link" onclick="opentab('skills')">Skills</P>
+                        <P class="tab-links"  onclick="opentab('experience')">Experience</P>
+                        <P class="tab-links"  onclick="opentab('education')">Education</P>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Front End Developer<br></li>
+                            <li><span>UI/UX Designer</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Data Sciences & Data Analysist</span><br>Query Database</li>
+                            <li><span>Digital Marketing</span><br>Become an advertising and video editing model</li>
+                        
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023</span><br>Web Developer<br>Front End Developer at Koding Juara</li>
+                            <li><span>2023 UI/UX Designer</span><br>Project at Shcool</li>
+                            <li><span>2023 Current Data Sciences & Data Analysist</span><br> Learning at SMKN 7 Semarang</span></li>
+                            <li><span>2023 Current Digital Marketing</span><br>Become an advertising and video editing model</li>
+                        
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Web Developer<br>Learning Skillvul & SMKN 7 Semarang</li>
+                            <li><span>2023 UI/UX Designer</span><br>SMKN 7 Semarang</li>
+                            <li><span>2023 Current Data Sciences & Data Analysist</span><br> Learning at SMKN 7 Semarang</span></li>
+                            <li><span>2023 Current Digital Marketing</span><br>Learning at SMKN 7 Semarang</li>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+        }
+            for(tabcontent of tabcontents){
+                    tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
